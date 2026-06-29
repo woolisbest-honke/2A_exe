@@ -237,7 +237,8 @@ let currentChannelShortsName = '';
 // 既存コードを変えずにInvidiousインスタンスとして混在運用するためfetchをラップ。
 (function(){
   const origFetch = window.fetch.bind(window);
-  const CHOCO_HOSTS = ['choco-inv-main-api.onrender.com','choco-inv-main-api-sexg.onrender.com','choco-inv-main-api-ev9d.onrender.com'];
+  // ひとつしか生きてないんだが？
+  const CHOCO_HOSTS = ['choco-inv-main-api.onrender.com'];
   function rewriteChoco(urlStr) {
     try {
       // CORSプロキシ越しでも対応 (encodeされた本物URLを抽出)
